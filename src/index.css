@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  @apply font-sans antialiased text-zinc-600 stroke-zinc-600
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h4 {
+    @apply text-lg font-bold;
+  }
+}
+
+
+textarea {
+  field-sizing: content;
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 rounded-xl
+}
+
+
+
+.overflow-fade {
+  mask-image: linear-gradient(to left, transparent 20px, #fff 40px);
+  -webkit-mask-image: linear-gradient(to left, transparent 20px, #fff 40px);
+}
+
+.float-label-input:focus-within label,
+.float-label-input input:not(:placeholder-shown)+label,
+.float-label-input textarea:not(:placeholder-shown)+label {
+  transform: translateY(-1.5rem) scale(0.8) translateX(-0.5rem);
+  background: linear-gradient(to bottom, rgb(244 244 245) 0%, rgb(244 244 245) 50%, white 50%, white 100%);
+}
+
+.calender-trigger>label.active {
+  transform: translateY(-1.5rem) scale(0.8) translateX(-0.5rem);
+  background: linear-gradient(to bottom, rgb(244 244 245) 0%, rgb(244 244 245) 50%, white 50%, white 100%);
+}
